@@ -11,8 +11,12 @@
     <div class="container">
         <div class="product">
             <div class="gallery">
-                <img src="images/image1.png" alt="image1">
-
+                <img id="main-image" src="images/image1.png" alt="Product Image">
+                <div class="thumbnails">
+                    <img src="images/image1.png" alt="image1" onclick="changeImage('images/image1.png')">
+                    <img src="images/image2.png" alt="image2" onclick="changeImage('images/image2.png')">
+                    <img src="images/image3.png" alt="image3" onclick="changeImage('images/image3.png')">
+                </div>
             </div>
             <div class="details">
                 <h1>Casual T Shirt</h1>
@@ -62,10 +66,21 @@
                             <input type="radio" name="color" id="black">
                             <span class="color-4"></span>
                         </label>
+                        <div class="quantity-selector">
+                            <p>Quantity</p>
+                            <input type="number" name="quantity" id="quantity" min="1" value="1">
+                        </div>
+                        <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
             </div>
         </div>
     </div>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+    </script>
 
 </body>
 </html>
